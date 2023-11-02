@@ -3,7 +3,7 @@ package ca.vanier.recipeideas.entities;
 import java.util.List;
 
 public class Recipe {
-    
+
     private Long id;
     private String[] keywords;
     private String description;
