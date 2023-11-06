@@ -1,6 +1,7 @@
 package ca.vanier.customersapi.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,17 +19,24 @@ public class CustomerController {
     @Autowired
     private CustomerService customerService;
 
-    @PostMapping("/save")
+    @PostMapping("/")
     public void save(@RequestBody Customer customer) {
-
         customerService.save(customer);
-
         System.out.println("HELLO");
     }
 
-    @GetMapping("/find")
+    @GetMapping("/")
     public Customer getCustomer(@RequestParam Long id) {
-        return customerService.findById(id).get();
+        Customer customer = customerService.findById(id).get();
+        customer.getId();
+        System.out.println(customer.toString());
+        return customer;
+    }
+
+    @DeleteMapping("/")
+    public String delete(@RequestParam Long id) {
+        customerService.delete(id);
+        return "ok";
     }
 
     

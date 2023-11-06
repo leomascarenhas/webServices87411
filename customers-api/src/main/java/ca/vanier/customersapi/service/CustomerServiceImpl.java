@@ -23,5 +23,21 @@ public class CustomerServiceImpl implements CustomerService {
     public Optional<Customer> findById(Long id) {
         return customerRepository.findById(id);
     }
+
+    @Override
+    public void update(Long id) {
+        Optional<Customer> customer = customerRepository.findById(id);
+        if (customer.isPresent()) {
+            customerRepository.save(customer.get());
+        }
+    }
+
+    @Override
+    public void delete(Long id) {
+        Optional<Customer> customer = customerRepository.findById(id);
+        if (customer.isPresent()) {
+            customerRepository.delete(customer.get());
+        }
+    }
     
 }

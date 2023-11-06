@@ -10,4 +10,8 @@ public interface CustomerService {
     
     Optional<Customer> findById(Long id);
 
+    void update(Long id);
+
+    void delete(Long id);
+
 }
