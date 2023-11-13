@@ -27,17 +27,13 @@ public class CountryServiceImpl implements CountryService {
     @Override
     public void update(Long id) {
         Optional<Country> country = countryRepository.findById(id);
-        if (country.isPresent()) {
-            countryRepository.save(country.get());
-        }
+        country.ifPresent(value -> countryRepository.save(value));
     }
 
     @Override
     public void delete(Long id) {
         Optional<Country> country = countryRepository.findById(id);
-        if (country.isPresent()) {
-            countryRepository.delete(country.get());
-        }
+        country.ifPresent(value -> countryRepository.delete(value));
     }
     
 }

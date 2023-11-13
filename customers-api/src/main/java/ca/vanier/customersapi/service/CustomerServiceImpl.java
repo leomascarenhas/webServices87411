@@ -35,17 +35,13 @@ public class CustomerServiceImpl implements CustomerService {
     @Override
     public void update(Long id) {
         Optional<Customer> customer = customerRepository.findById(id);
-        if (customer.isPresent()) {
-            customerRepository.save(customer.get());
-        }
+        customer.ifPresent(value -> customerRepository.save(value));
     }
 
     @Override
     public void delete(Long id) {
         Optional<Customer> customer = customerRepository.findById(id);
-        if (customer.isPresent()) {
-            customerRepository.delete(customer.get());
-        }
+        customer.ifPresent(value -> customerRepository.delete(value));
     }
     
 }
