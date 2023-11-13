@@ -1,12 +1,11 @@
 package ca.vanier.customersapi.service;
 
-import java.util.Optional;
-
+import ca.vanier.customersapi.entity.Customer;
+import ca.vanier.customersapi.repository.CustomerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ca.vanier.customersapi.entity.Customer;
-import ca.vanier.customersapi.repository.CustomerRepository;
+import java.util.Optional;
 
 @Service
 public class CustomerServiceImpl implements CustomerService {
@@ -14,8 +13,17 @@ public class CustomerServiceImpl implements CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
+    @Autowired
+    private CityService cityService;
+
     @Override
     public Customer save(Customer customer) {
+        if (customer.getAddresses() != null) {
+            customer.getAddresses().forEach(customerAddress -> {
+                customerAddress.setCity(cityService.save(customerAddress.getCity()));
+            });
+        }
+
         return customerRepository.save(customer);
     }
 
