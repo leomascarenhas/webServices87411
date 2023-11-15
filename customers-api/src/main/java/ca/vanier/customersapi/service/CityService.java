@@ -1,8 +1,8 @@
 package ca.vanier.customersapi.service;
 
-import java.util.Optional;
+import ca.vanier.addresses.entity.City;
 
-import ca.vanier.customersapi.entity.City;
+import java.util.Optional;
 
 public interface CityService {
 

@@ -1,5 +1,6 @@
 package ca.vanier.customersapi.entity;
 
+import ca.vanier.addresses.entity.CustomerAddress;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +23,7 @@ public class Customer {
     private String email;
 
     @OneToMany(cascade=CascadeType.ALL)
-    private List<Address> addresses;
+    // import from new lib
+    private List<CustomerAddress> addresses;
 
 }

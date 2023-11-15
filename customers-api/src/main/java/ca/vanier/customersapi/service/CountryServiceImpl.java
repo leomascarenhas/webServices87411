@@ -1,12 +1,11 @@
 package ca.vanier.customersapi.service;
 
-import java.util.Optional;
-
+import ca.vanier.addresses.entity.Country;
+import ca.vanier.customersapi.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import ca.vanier.customersapi.entity.Country;
-import ca.vanier.customersapi.repository.CountryRepository;
+import java.util.Optional;
 
 @Service
 public class CountryServiceImpl implements CountryService {

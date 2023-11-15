@@ -1,8 +1,8 @@
 package ca.vanier.customersapi.service;
 
-import java.util.Optional;
+import ca.vanier.addresses.entity.Country;
 
-import ca.vanier.customersapi.entity.Country;
+import java.util.Optional;
 
 public interface CountryService {
     

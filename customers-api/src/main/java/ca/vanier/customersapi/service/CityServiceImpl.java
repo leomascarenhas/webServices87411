@@ -1,7 +1,6 @@
 package ca.vanier.customersapi.service;
 
-import ca.vanier.customersapi.entity.City;
-import ca.vanier.customersapi.entity.Country;
+import ca.vanier.addresses.entity.City;
 import ca.vanier.customersapi.repository.CityRepository;
 import ca.vanier.customersapi.repository.CountryRepository;
 import org.springframework.beans.factory.annotation.Autowired;

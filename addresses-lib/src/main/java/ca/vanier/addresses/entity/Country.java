@@ -1,4 +1,4 @@
-package ca.vanier.customersapi.entity;
+package ca.vanier.addresses.entity;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

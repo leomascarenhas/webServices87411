@@ -1,4 +1,4 @@
-package ca.vanier.customersapi.entity;
+package ca.vanier.addresses.entity;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -7,7 +7,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class Address {
+public class CustomerAddress {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
