@@ -8,8 +8,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="addresses-lib" />
-        <module name="customers-api" />
+        <module name="customers-lib" />
         <module name="recipeideas" />
+        <module name="customers-api" />
       </profile>
     </annotationProcessing>
   </component>

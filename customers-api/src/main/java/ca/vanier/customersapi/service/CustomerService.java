@@ -1,8 +1,8 @@
 package ca.vanier.customersapi.service;
 
-import java.util.Optional;
+import ca.vanier.customers.entity.Customer;
 
-import ca.vanier.customersapi.entity.Customer;
+import java.util.Optional;
 
 public interface CustomerService {
     

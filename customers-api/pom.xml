@@ -59,7 +59,13 @@
 		<dependency>
 			<groupId>ca.vanier</groupId>
 			<artifactId>addresses-lib</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<version>1.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>ca.vanier</groupId>
+			<artifactId>customers-lib</artifactId>
+			<version>1.0.2-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 

@@ -6,7 +6,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
 @SpringBootApplication
-@EntityScan(basePackages = {"ca.vanier.customersapi.entity", "ca.vanier.addresses.entity"})
+@EntityScan(basePackages = {
+		"ca.vanier.customersapi.entity",
+		"ca.vanier.addresses.entity",
+		"ca.vanier.customers.entity"})
 @EnableAutoConfiguration
 public class CustomersApiApplication {
 

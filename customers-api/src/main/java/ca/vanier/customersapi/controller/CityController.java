@@ -1,6 +1,8 @@
 package ca.vanier.customersapi.controller;
 
 import ca.vanier.addresses.entity.City;
+import ca.vanier.addresses.utils.Endpoints;
+import ca.vanier.addresses.utils.Messages;
 import ca.vanier.customersapi.service.CityService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,5 +50,31 @@ public class CityController {
 
         return new ResponseEntity<>(HttpStatus.NOT_MODIFIED);
     }
+
+    // Map an endpoint to send a message.
+    // The endpoint and message must be a constant and they must also come from our library
+    // getCountryNameByCityId or getCountryNameByCiyName
+    // The country of this city is: <COUNTRY>
+    // Error message (also coming from lib)
+    @GetMapping(Endpoints.GET_COUNTRY_NAME)
+    public ResponseEntity<String> getCountryName(@RequestParam Long id) {
+        Optional<City> city = cityService.findById(id);
+
+        if (city.isPresent()) {
+            String message = String.format(
+                    Messages.GET_COUNTRY_SUCCESS,
+                    city.get().getName(),
+                    city.get().getCountry().getName());
+
+            return new ResponseEntity<>(
+                    message,
+                    HttpStatus.ACCEPTED);
+        }
+
+        return new ResponseEntity<>(
+                Messages.GET_COUNTRY_ERROR,
+                HttpStatus.NOT_FOUND);
+    }
+
 
 }

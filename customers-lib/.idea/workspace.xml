@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b654bb52-b5c8-4b23-b40c-db931f38d95f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../addresses-lib/src/main/java/ca/vanier/addresses/utils/Endpoints.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../addresses-lib/src/main/java/ca/vanier/addresses/utils/Messages.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/ca/vanier/logic/CustomerLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addresses-lib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../addresses-lib/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addresses-lib/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../addresses-lib/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addresses-lib/src/main/java/ca/vanier/addresses/entity/CustomerAddress.java" beforeDir="false" afterPath="$PROJECT_DIR$/../addresses-lib/src/main/java/ca/vanier/addresses/entity/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../addresses-lib/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../customers-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/controller/CityController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/controller/CityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/entity/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ca/vanier/entity/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/service/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/service/CustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/service/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../customers-api/src/main/java/ca/vanier/customersapi/service/CustomerServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2YRn21KdkX2UaziA0l411vBBrqh" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b654bb52-b5c8-4b23-b40c-db931f38d95f" name="Changes" comment="" />
+      <created>1700497052805</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1700497052805</updated>
+    </task>
+    <servers />
+  </component>
+</project>

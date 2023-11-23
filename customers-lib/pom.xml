@@ -4,8 +4,8 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>ca.vanier</groupId>
-	<artifactId>addresses-lib</artifactId>
-	<version>1.0.1-SNAPSHOT</version>
+	<artifactId>customers-lib</artifactId>
+	<version>1.0.2-SNAPSHOT</version>
 
 	<properties>
 		<maven.compiler.source>17</maven.compiler.source>
@@ -25,6 +25,12 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
 			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>ca.vanier</groupId>
+			<artifactId>addresses-lib</artifactId>
+			<version>1.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
