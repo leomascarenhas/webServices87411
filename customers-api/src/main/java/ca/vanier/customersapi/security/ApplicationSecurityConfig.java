@@ -44,7 +44,9 @@ public class ApplicationSecurityConfig {
         // Define the authorization needed to access each URL pattern
         http.authorizeHttpRequests(auth ->
                 auth
-                        .requestMatchers(mvcMatcherBuilder.pattern(API_URL_PATTERN)).hasRole("USER")
+                        // The request must match the URL pattern & User role
+                        .requestMatchers(mvcMatcherBuilder.pattern(API_URL_PATTERN)).hasRole("ADMIN")
+
                         .requestMatchers(PathRequest.toH2Console()).authenticated()
                         .anyRequest().authenticated()
         );
