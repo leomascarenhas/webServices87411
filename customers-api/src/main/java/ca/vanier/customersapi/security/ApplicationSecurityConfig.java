@@ -22,11 +22,8 @@ public class ApplicationSecurityConfig {
 
     private static final String API_URL_PATTERN = "/city/";
 
-    private PasswordEncoder passwordEncoder;
-
     @Autowired
     public ApplicationSecurityConfig(PasswordEncoder passwordEncoder) {
-        this.passwordEncoder = passwordEncoder;
     }
 
     @Bean
@@ -62,11 +59,19 @@ public class ApplicationSecurityConfig {
 
     @Bean
     public UserDetailsService userDetailsService(BCryptPasswordEncoder bCryptPasswordEncoder) {
-        UserDetails user = User.withUsername("student")
+
+        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
+        manager.createUser(User.withUsername("student")
                 .password(bCryptPasswordEncoder.encode("password"))
                 .roles("USER")
-                .build();
-        return new InMemoryUserDetailsManager(user);
+                .build());
+
+        manager.createUser(User.withUsername("admin")
+                .password(bCryptPasswordEncoder.encode("admin"))
+                .roles("USER", "ADMIN")
+                .build());
+
+        return manager;
     }
 
 
