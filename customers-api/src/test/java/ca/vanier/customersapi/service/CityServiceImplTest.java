@@ -8,6 +8,9 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
+import javax.swing.text.html.Option;
+import java.util.Optional;
+
 @ExtendWith(SpringExtension.class)
 class CityServiceImplTest {
 
@@ -42,14 +45,48 @@ class CityServiceImplTest {
     }
 
     @Test
-    void findById() {
+    void findById_isPresent() {
+        // Setup
+        Country canada = new Country();
+        canada.setName("Canada");
+
+        City city = new City();
+        city.setId(2L);
+        city.setName("Montreal");
+        city.setCountry(canada);
+
+        Mockito
+                .when(cityService.findById(Mockito.anyLong()))
+                .thenReturn(Optional.of(city));
+
+        // Execution
+        Optional<City> cityResult = cityService.findById(1L);
+
+        // Assertions
+        assert cityResult.isPresent();
+    }
+
+    @Test
+    void findById_isNotPresent() {
+        // Setup
+        Mockito
+                .when(cityService.findById(Mockito.anyLong()))
+                .thenReturn(Optional.empty());
+
+        // Execution
+        Optional<City> cityResult = cityService.findById(1L);
+
+        // Assertions
+        assert cityResult.isEmpty();
     }
 
     @Test
     void update() {
+
     }
 
     @Test
     void delete() {
+
     }
 }

@@ -28,10 +28,10 @@ public class CityController {
 
     @GetMapping("/")
     public ResponseEntity<City> findById(@RequestParam Long id) {
-        Optional<City> customer = cityService.findById(id);
+        Optional<City> city = cityService.findById(id);
 
         // do we have a customer?
-        return customer.map(
+        return city.map(
                         // if yes: send it, with a success code
                         value -> new ResponseEntity<>(value, HttpStatus.ACCEPTED))
 
