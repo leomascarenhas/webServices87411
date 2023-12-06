@@ -81,12 +81,60 @@ class CityServiceImplTest {
     }
 
     @Test
-    void update() {
+	void update() {
 
-    }
+		// setup
+		Country canada = new Country();
+		canada.setName("Canada");
 
-    @Test
-    void delete() {
+		City city = new City();
+		city.setId(2L);
+		city.setName("Montreal");
+		city.setCountry(canada);
 
-    }
+		// moking the void data
+		Mockito.doNothing().when(cityService).update(city.getId());
+
+		// Execution
+		cityService.update(city.getId());
+
+		// Assertions
+		Mockito.verify(cityService, Mockito.times(1)).update(city.getId());
+
+	}
+	@Test
+	void update_isNotPresent() {
+		// Setup
+		Mockito.doNothing().when(cityService).update(Mockito.anyLong());
+
+		// Execution
+		cityService.update(1L);
+		Optional<City> cityResult = cityService.findById(1L);
+
+		// Assertions
+		Mockito.verify(cityService, Mockito.times(1)).update(1L);
+		assert cityResult.isEmpty();
+	}
+
+	@Test
+	void delete() {
+
+		// Setup
+		Country canada = new Country();
+		canada.setName("Canada");
+
+		City city = new City();
+		city.setId(2L);
+		city.setName("Montreal");
+		city.setCountry(canada);
+
+		Mockito.doNothing().when(cityService).delete(city.getId());
+
+		// Execution
+		cityService.delete(city.getId());
+
+		// Assertions
+		Mockito.verify(cityService, Mockito.times(1)).delete(city.getId());
+
+	}
 }
