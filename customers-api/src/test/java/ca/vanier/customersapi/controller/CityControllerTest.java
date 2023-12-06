@@ -32,7 +32,6 @@ public class CityControllerTest {
 
     @Test
     void testDelete() {
-
     }
 
     @Test
